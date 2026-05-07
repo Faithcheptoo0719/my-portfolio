@@ -1,1 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Faith Cheptoo — Portfolio</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --white:#fafaf8;
+  --off:#f5f3ee;
+  --card:#ffffff;
+  --ink:#171717;
+  --ink2:#2d2d2d;
+  --muted:#6d6d66;
+  --border:#dfdbd2;
+  --green:#2f8f67;
+  --green2:#52b788;
+  --green-soft:#e9f7f0;
+  --shadow:0 10px 35px rgba(0,0,0,0.05);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--white);
+  color:var(--ink);
+  font-family:'Outfit',sans-serif;
+  line-height:1.75;
+  overflow-x:hidden;
+}
+
+/* NAV */
+
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:1rem 6vw;
+  background:rgba(250,250,248,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+
+.logo{
+  font-family:'Instrument Serif',serif;
+  text-decoration:none;
+  color:var(--ink);
+  font-size:1.3rem;
+}
+
+.logo span{
+  color:var(--green2);
+  font-style:italic;
+}
+
+.nav-links{
+  display:flex;
+  gap:2rem;
+  list-style:none;
+  align-items:center;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:var(--muted);
+  font-size:0.9rem;
+  transition:0.2s;
+}
+
+.nav-links a:hover{
+  color:var(--ink);
+}
+
+.contact-btn{
+  background:var(--ink);
+  color:white !important;
+  padding:0.55rem 1.1rem;
+  border-radius:999px;
+}
+
+.contact-btn:hover{
+  transform:translateY(-2px);
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  padding-top:75px;
+}
+
+.hero-left{
+  padding:6rem 6vw;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.tag{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:var(--green);
+  font-size:0.78rem;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  font-weight:600;
+  margin-bottom:1.7rem;
+}
+
+.dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--green2);
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%,100%{opacity:1}
+  50%{opacity:0.35}
+}
+
+.hero h1{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(3rem,6vw,5.2rem);
+  line-height:1.03;
+  letter-spacing:-0.03em;
+  margin-bottom:1.5rem;
+}
+
+.hero h1 em{
+  color:var(--green2);
+  font-style:italic;
+}
+
+.hero p{
+  max-width:560px;
+  color:var(--muted);
+  font-size:1.02rem;
+  font-weight:300;
+  margin-bottom:2.2rem;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+
+.btn{
+  text-decoration:none;
+  padding:0.8rem 1.4rem;
+  border-radius:999px;
+  font-size:0.92rem;
+  transition:0.2s;
+  font-weight:500;
+}
+
+.btn-dark{
+  background:var(--ink);
+  color:white;
+}
+
+.btn-dark:hover{
+  transform:translateY(-3px);
+}
+
+.btn-light{
+  border:1px solid var(--border);
+  color:var(--ink);
+}
+
+.btn-light:hover{
+  border-color:var(--green2);
+  color:var(--green);
+}
+
+.hero-right{
+  background:var(--off);
+  border-left:1px solid var(--border);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:3rem;
+}
+
+.photo{
+  width:100%;
+  height:520px;
+  border-radius:18px;
+  overflow:hidden;
+  background:#ddd;
+  box-shadow:var(--shadow);
+}
+
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.quick{
+  margin-top:1.5rem;
+  display:flex;
+  flex-direction:column;
+  gap:0.8rem;
+}
+
+.quick-card{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:1rem 1.1rem;
+  font-size:0.88rem;
+  color:var(--muted);
+}
+
+.quick-card strong{
+  color:var(--ink);
+}
+
+/* SECTIONS */
+
+section{
+  padding:6rem 6vw;
+  border-bottom:1px solid var(--border);
+}
+
+.label{
+  color:var(--green);
+  font-size:0.74rem;
+  text-transform:uppercase;
+  letter-spacing:0.15em;
+  font-weight:700;
+  margin-bottom:0.7rem;
+}
+
+.title{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(2rem,4vw,3rem);
+  margin-bottom:0.7rem;
+}
+
+.sub{
+  max-width:600px;
+  color:var(--muted);
+  font-weight:300;
+  margin-bottom:3rem;
+}
+
+/* ABOUT */
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1.2fr 0.8fr;
+  gap:4rem;
+}
+
+.about-text p{
+  margin-bottom:1.3rem;
+  color:var(--muted);
+}
+
+.about-text strong{
+  color:var(--ink);
+}
+
+.info-cards{
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+}
+
+.info-card{
+  background:var(--off);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:1.3rem;
+}
+
+.info-small{
+  color:var(--green);
+  text-transform:uppercase;
+  font-size:0.7rem;
+  letter-spacing:0.1em;
+  margin-bottom:0.3rem;
+  font-weight:700;
+}
+
+.info-main{
+  font-size:1rem;
+  color:var(--ink);
+  font-weight:600;
+}
+
+.info-sub{
+  font-size:0.85rem;
+  color:var(--muted);
+}
+
+/* SKILLS */
+
+.skills{
+  background:var(--off);
+}
+
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:1.2rem;
+}
+
+.skill{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:1.5rem;
+  transition:0.25s;
+}
+
+.skill:hover{
+  transform:translateY(-5px);
+  border-color:var(--green2);
+  box-shadow:var(--shadow);
+}
+
+.skill-top{
+  display:flex;
+  align-items:center;
+  gap:0.8rem;
+  margin-bottom:1rem;
+}
+
+.icon{
+  width:40px;
+  height:40px;
+  border-radius:10px;
+  background:var(--green-soft);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:1rem;
+}
+
+.skill h3{
+  font-size:1rem;
+}
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.5rem;
+}
+
+.tag-pill{
+  background:var(--off);
+  border:1px solid var(--border);
+  padding:0.3rem 0.7rem;
+  border-radius:999px;
+  font-size:0.75rem;
+  color:var(--muted);
+}
+
+/* PROJECTS */
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:1.5rem;
+}
+
+.project{
+  border:1px solid var(--border);
+  border-radius:18px;
+  overflow:hidden;
+  background:white;
+  transition:0.25s;
+}
+
+.project:hover{
+  transform:translateY(-6px);
+  border-color:var(--green2);
+  box-shadow:var(--shadow);
+}
+
+.project-top{
+  height:190px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:3rem;
+  background:linear-gradient(135deg,#edf8f2,#d7f0e2);
+  position:relative;
+}
+
+.project-badge{
+  position:absolute;
+  top:15px;
+  left:15px;
+  background:white;
+  border:1px solid var(--border);
+  padding:0.3rem 0.8rem;
+  border-radius:999px;
+  font-size:0.7rem;
+  color:var(--green);
+  font-weight:600;
+}
+
+.project-body{
+  padding:1.5rem;
+}
+
+.project-body h3{
+  font-size:1.2rem;
+  margin-bottom:0.6rem;
+}
+
+.project-body p{
+  color:var(--muted);
+  font-size:0.92rem;
+  margin-bottom:1rem;
+}
+
+.project-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.5rem;
+}
+
+.project-role{
+  margin-top:1rem;
+  padding-top:1rem;
+  border-top:1px solid var(--border);
+  color:var(--green);
+  font-size:0.82rem;
+}
+
+/* EDUCATION */
+
+.education{
+  background:var(--off);
+}
+
+.edu{
+  padding:1.5rem 0;
+  border-bottom:1px solid var(--border);
+  display:grid;
+  grid-template-columns:130px 1fr;
+  gap:2rem;
+}
+
+.edu-year{
+  color:var(--muted);
+  font-size:0.85rem;
+}
+
+.edu h3{
+  margin-bottom:0.3rem;
+}
+
+.edu p{
+  color:var(--muted);
+  font-size:0.92rem;
+}
+
+/* CONTACT */
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:4rem;
+}
+
+.contact-note{
+  color:var(--muted);
+  margin-bottom:2rem;
+}
+
+.links{
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+}
+
+.link{
+  text-decoration:none;
+  color:var(--ink);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:1rem 1.2rem;
+  transition:0.2s;
+  background:white;
+}
+
+.link:hover{
+  border-color:var(--green2);
+  transform:translateX(5px);
+}
+
+.link small{
+  display:block;
+  color:var(--muted);
+  margin-bottom:0.2rem;
+}
+
+.contact-box{
+  background:var(--off);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:2rem;
+}
+
+.contact-box h3{
+  font-family:'Instrument Serif',serif;
+  font-size:1.7rem;
+  margin-bottom:1rem;
+}
+
+.contact-box p{
+  color:var(--muted);
+  margin-bottom:1.5rem;
+}
+
+.available{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.6rem;
+}
+
+.available span{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:999px;
+  padding:0.4rem 0.9rem;
+  font-size:0.8rem;
+  color:var(--green);
+  font-weight:600;
+}
+
+/* FOOTER */
+
+footer{
+  padding:2rem 6vw;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:1rem;
+  color:var(--muted);
+  font-size:0.85rem;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .hero{
+    grid-template-columns:1fr;
+  }
+
+  .hero-right{
+    border-left:none;
+    border-top:1px solid var(--border);
+  }
+
+  .about-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:650px){
+
+  .nav-links li:not(:last-child){
+    display:none;
+  }
+
+  section{
+    padding:4.5rem 5vw;
+  }
+
+  nav{
+    padding:1rem 5vw;
+  }
+
+  .hero-left{
+    padding:5rem 5vw;
+  }
+
+  .hero-right{
+    padding:2rem 5vw;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+
+<nav>
+  <a href="#" class="logo">Faith <span>Cheptoo</span></a>
+
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact" class="contact-btn">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-left">
+
+    <div class="tag">
+      <div class="dot"></div>
+      Open to internships & opportunities
+    </div>
+
+    <h1>
+      Aspiring <br>
+      <em>Full Stack</em><br>
+      & Systems Developer
+    </h1>
+
+    <p>
+     Hi, I'm Faith — a Computer Science student at Kirinyaga University with a strong passion for full stack development, networking, and system design. I thrive on learning through building, tackling complex technical challenges, and exploring how diverse systems integrate and operate seamlessly.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#projects" class="btn btn-dark">View Projects →</a>
+      <a href="#contact" class="btn btn-light">Get In Touch</a>
+    </div>
+
+  </div>
+
+  <div class="hero-right">
+
+    <div class="photo">
+      <img src="images/mee.jpg" alt="Faith Cheptoo">
+    </div>
+
+    <div class="quick">
+
+      <div class="quick-card">
+        <strong>Status:</strong> 3rd Year Computer Science Student
+      </div>
+
+      <div class="quick-card">
+        <strong>Focus:</strong> Full Stack Development · Systems · Networking
+      </div>
+
+      <div class="quick-card">
+        <strong>Strength:</strong> Fast learner with strong curiosity and consistency
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <div class="label">About Me</div>
+  <h2 class="title">Building my path in tech</h2>
+
+  <p class="sub">
+    A student developer focused on growth, practical learning, and building real technical skills.
+  </p>
+
+  <div class="about-grid">
+
+    <div class="about-text">
+
+      <p>
+        I'm <strong>Faith Cheptoo</strong>, a Computer Science student with a growing passion for
+        software systems, networking, and web development. I enjoy exploring how technology works
+        and using that knowledge to create useful and practical solutions.
+      </p>
+
+      <p>
+        Through my coursework and industrial attachment experience, I've gained exposure to
+        <strong>network configuration, database management, troubleshooting, and system analysis</strong>.
+        I'm still learning, but I'm committed to improving my skills consistently through hands-on practice.
+      </p>
+
+      <p>
+        I value <strong>curiosity, adaptability, and continuous learning</strong>. Whether I'm building
+        a small web project, designing a database, or configuring a network, I approach every task
+        with patience and a willingness to grow.
+      </p>
+
+    </div>
+
+    <div class="info-cards">
+
+      <div class="info-card">
+        <div class="info-small">Current Status</div>
+        <div class="info-main">Computer Science Student</div>
+        <div class="info-sub">Open to internships & entry-level opportunities</div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-small">Interests</div>
+        <div class="info-main">Full Stack Development</div>
+        <div class="info-sub">Systems · Networking · Databases</div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-small">Location</div>
+        <div class="info-main">Kenya</div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-small">Email</div>
+        <div class="info-main">timikafaith@gmail.com</div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills" class="skills">
+
+  <div class="label">Skills</div>
+  <h2 class="title">Skills & Tools</h2>
+
+  <p class="sub">
+    Technical skills and tools I've explored through coursework, personal projects, and attachment experience.
+  </p>
+
+  <div class="skills-grid">
+
+    <div class="skill">
+      <div class="skill-top">
+        <div class="icon">🌐</div>
+        <h3>Web Development</h3>
+      </div>
+
+      <div class="tags">
+        <span class="tag-pill">HTML</span>
+        <span class="tag-pill">CSS</span>
+        <span class="tag-pill">JavaScript (Basics)</span>
+        <span class="tag-pill">Responsive Design</span>
+        <span class="tag-pill">UI Structuring</span>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-top">
+        <div class="icon">📡</div>
+        <h3>Networking</h3>
+      </div>
+
+      <div class="tags">
+        <span class="tag-pill">LAN / WAN / MAN</span>
+        <span class="tag-pill">IP Addressing</span>
+        <span class="tag-pill">Router & Switch Configuration</span>
+        <span class="tag-pill">Wireless Networks</span>
+        <span class="tag-pill">Cable Termination</span>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-top">
+        <div class="icon">🗄️</div>
+        <h3>Databases</h3>
+      </div>
+
+      <div class="tags">
+        <span class="tag-pill">MySQL (Basics)</span>
+        <span class="tag-pill">Database Design</span>
+        <span class="tag-pill">SQL Queries</span>
+        <span class="tag-pill">Data Validation</span>
+        <span class="tag-pill">Reporting</span>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-top">
+        <div class="icon">⚙️</div>
+        <h3>Systems & Analysis</h3>
+      </div>
+
+      <div class="tags">
+        <span class="tag-pill">System Analysis</span>
+        <span class="tag-pill">Requirements Gathering</span>
+        <span class="tag-pill">Troubleshooting</span>
+        <span class="tag-pill">Documentation</span>
+        <span class="tag-pill">Workflow Design</span>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-top">
+        <div class="icon">🛠️</div>
+        <h3>Tools & Platforms</h3>
+      </div>
+
+      <div class="tags">
+        <span class="tag-pill">VS Code</span>
+        <span class="tag-pill">GitHub</span>
+        <span class="tag-pill">Cisco Packet Tracer</span>
+        <span class="tag-pill">Trello</span>
+        <span class="tag-pill">Jira</span>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-top">
+        <div class="icon">💬</div>
+        <h3>Soft Skills</h3>
+      </div>
+
+      <div class="tags">
+        <span class="tag-pill">Problem Solving</span>
+        <span class="tag-pill">Adaptability</span>
+        <span class="tag-pill">Team Collaboration</span>
+        <span class="tag-pill">Fast Learner</span>
+        <span class="tag-pill">Communication</span>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+  <div class="label">Projects</div>
+  <h2 class="title">Projects I've Worked On</h2>
+
+  <p class="sub">
+    Small but genuine projects that reflect my learning journey and technical interests.
+  </p>
+
+  <div class="projects-grid">
+
+    <div class="project">
+
+      <div class="project-top">
+        💻
+        <div class="project-badge">Web Development</div>
+      </div>
+
+      <div class="project-body">
+
+        <h3>Personal Portfolio Website</h3>
+
+        <p>
+          Designed and built a personal portfolio website using HTML and CSS to showcase
+          my background, skills, and projects. Focused on clean layout, responsiveness,
+          and improving my front-end development skills.
+        </p>
+
+        <div class="project-tags">
+          <span class="tag-pill">HTML</span>
+          <span class="tag-pill">CSS</span>
+          <span class="tag-pill">Responsive Design</span>
+          <span class="tag-pill">VS Code</span>
+        </div>
+
+        <div class="project-role">
+          Personal project · Built independently
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="project">
+
+      <div class="project-top" style="background:linear-gradient(135deg,#edf3ff,#dbe8ff);">
+        📡
+        <div class="project-badge">Networking</div>
+      </div>
+
+      <div class="project-body">
+
+        <h3>Network Topology Design</h3>
+
+        <p>
+          Designed and simulated a local area network using Cisco Packet Tracer.
+          Configured routers and switches, assigned IP addresses, and tested
+          communication between devices.
+        </p>
+
+        <div class="project-tags">
+          <span class="tag-pill">Cisco Packet Tracer</span>
+          <span class="tag-pill">LAN Design</span>
+          <span class="tag-pill">IP Addressing</span>
+          <span class="tag-pill">Router Configuration</span>
+        </div>
+
+        <div class="project-role">
+          Academic networking project
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education" class="education">
+
+  <div class="label">Education</div>
+  <h2 class="title">Academic Background</h2>
+
+  <p class="sub">
+    My academic journey and technical foundation.
+  </p>
+
+  <div class="edu">
+
+    <div class="edu-year">
+      2023 — Present
+    </div>
+
+    <div>
+      <h3>Bachelor of Science in Computer Science</h3>
+      <p>Kirinyaga University · Kenya</p>
+    </div>
+
+  </div>
+
+  <div class="edu">
+
+    <div class="edu-year">
+      Completed
+    </div>
+
+    <div>
+      <h3>Kenya Certificate of Secondary Education (KCSE)</h3>
+      <p>Kenya</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <div class="label">Contact</div>
+  <h2 class="title">Let's Connect</h2>
+
+  <div class="contact-grid">
+
+    <div>
+
+      <p class="contact-note">
+        I'm currently looking for  opportunities and environments where I can
+        continue learning, contribute to real projects, and grow as a developer.
+      </p>
+
+      <div class="links">
+
+        <a href="mailto:timikafaith@gmail.com" class="link">
+          <small>Email</small>
+          timikafaith@gmail.com
+        </a>
+
+        <a href="tel:+254706872643" class="link">
+          <small>Phone</small>
+          +254 706 872 643
+        </a>
+
+        <a href="https://github.com/faithcheptoo" target="_blank" class="link">
+          <small>GitHub</small>
+          github.com/faithcheptoo
+        </a>
+
+        <a href="https://linkedin.com/in/faithcheptoo" target="_blank" class="link">
+          <small>LinkedIn</small>
+          linkedin.com/in/faithcheptoo
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="contact-box">
+
+      <h3>What I bring</h3>
+
+      <p>
+        I’m approaching the completion of my undergraduate studies, and I’ve built a disciplined, curious, and resilient approach to learning. I adapt quickly, grasp new concepts with ease, and genuinely enjoy sharpening my skills through practical problem‑solving and continuous growth.
+      </p>
+
+      <div class="available">
+        <span>Internships</span>
+        <span>Entry-Level Roles</span>
+        <span>Remote</span>
+        <span>On-Site</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <p>© 2026 Faith Cheptoo · All rights reserved</p>
+  <p>Built with HTML & CSS</p>
+</footer>
+
+</body>
+</html>
